@@ -48,7 +48,6 @@ router.post('/login', async (req, res) => {
   }
 });
 
-//if user clicks logout then session and session data is deleted
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {

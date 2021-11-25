@@ -32,13 +32,12 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        min: [8],
+        len: [8],
       },
     },
   },
   {
     hooks: {
-      //send to bcrypt before posting to database
       beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;

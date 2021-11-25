@@ -1,0 +1,31 @@
+{
+  "name": "Tech-Blog",
+  "version": "1.0.0",
+  "description": "[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://choosealicense.com/licenses/mit/) [![Github Commits](https://img.shields.io/github/commit-activity/w/HobbaZ/Tech-Blog)](https://github.com/HobbaZ/Tech-Blog/commits) [![GitHub latest commit](https://img.shields.io/github/last-commit/HobbaZ/Tech-Blog)](https://github.com/HobbaZ/Tech-Blog/branches) [![GitHub followers](https://img.shields.io/github/followers/HobbaZ.svg)]() ![GitHub repo size](https://img.shields.io/github/repo-size/HobbaZ/Tech-Blog) [![GitHub issues](https://img.shields.io/github/issues/HobbaZ/Tech-Blog)](https://img.shields.io/github/issues/HobbaZ/Tech-Blog) ![GitHub forks](https://img.shields.io/github/forks/HobbaZ/Tech-Blog) ![GitHub language count](https://img.shields.io/github/languages/count/HobbaZ/Tech-Blog)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HobbaZ/Tech-Blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HobbaZ/Tech-Blog/issues"
+  },
+  "homepage": "https://github.com/HobbaZ/Tech-Blog#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.2",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^6.0.1",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.12.0-alpha.1"
+  }
+}

@@ -1,9 +1,33 @@
-<div class="text-center">
-  <h2>{{title}}</h2>
+<div class="text-center post">
+  <h2 class="postTitle">{{title}}</h2>
   <p>{{description}}</p>
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
+  <hr>
   
-  <p>
-    <button class="btn btn-primary">Comment on post!</button>
-  </p>
+  <!--add comment to post area-->
+    <form class="form-inline">
+      <div class="form-group">
+        <label for="comment-desc"></label>
+        <textarea class="form-control" type="text" id="comment-desc" name="comment-desc" placeholder="Add your comment"></textarea>
+      </div>
+        <button type="submit" class="btn btn-primary">Add Comment</button>
+        <p>{{comments.length}} comments</p>
+      </form>
+      
+<!-- Loop through comments-->
+  {{#each comments as |comment| }}
+<div class="row mb-4 comment">
+  <div class="col-md-5">
+    <p>{{commentdesc}}</p>
+    <p>{{comment.user.name}} on {{format_date comment.date_created}}</p>
+  </div>
+
+</div>
+{{/each}}
+
+<!--Add length of comment array to post-->
+{{#if comments.length}}
+<p>{{comments.length}} comments</p>
+{{/if}}
+
 </div>

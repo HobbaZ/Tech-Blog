@@ -24,9 +24,24 @@ header a:hover {
   text-decoration: none;
 }
 
-a:hover, nav button:hover {
+nav button:hover {
   color: rgb(44, 44, 44);
   text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  background-color: rgb(177, 177, 177);
+  color: black;
+}
+
+form {
+  color: black;
+  padding: 25px;
 }
 
 .no-button {
@@ -44,8 +59,6 @@ a:hover, nav button:hover {
 
 .post {
   padding: 20px;
-  border-radius: 2%;
-  background-color: #ccc;
 }
 
 .postTitle {

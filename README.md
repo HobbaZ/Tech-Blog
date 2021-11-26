@@ -119,8 +119,12 @@ Deployed to heroku
 ## Technology
 
 - Heroku
-- 
-- 
+- MySQL
+- Node.js
+- Express.js
+- Sequelize
+- dotenv
+- Express Handlebars
 
 ## Contributors
 [Zachary Hobba](https://github.com/HobbaZ)

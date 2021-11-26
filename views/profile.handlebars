@@ -9,36 +9,37 @@
     <h3>Create a New Post:</h3>
 
     <form class="form new-post-form">
-      <div class="form-group">
+      <div class="form-group row">
         <label for="post-title">post title:</label>
-        <input class="form-input" type="text" id="post-title" name="post-title" />
+        <input class="form-control" type="text" id="post-title" name="post-title" />
       </div>
 
-      <div class="form-group">
+      <div class="form-group row">
         <label for="post-desc">description:</label>
-        <textarea class="form-input" id="post-desc" name="post-desc"></textarea>
+        <textarea class="form-control" id="post-desc" name="post-desc"></textarea><br>
       </div>
 
-      <div class="form-group">
         <button type="submit" class="btn btn-primary">Create</button>
-      </div>
+
     </form>
   </div>
 
   {{#if posts.length}}
   <div class="col-md-6 posts-list">
-    <h3>Current posts:</h3>
+    <h3 class="postTitle">Current posts:</h3>
 
     {{#each posts as |post|}}
-    <div class="row mb-2">
+    <div class="row mb-2 post">
+      <a href="/post/{{post.id}}">
       <div class="col-md-8">
-        <h4><a href="/post/{{post.id}}">{{post.title}}</a></h4>
+        <h4 class = 'postTitle'>{{post.title}}
+          <button class="btn btn-sm btn-danger" data-id="{{post.id}}">X</button>
+        </h4>
         <p>{{post.description}}</p>
       </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{post.id}}">X</button>
+      </a>
       </div>
-    </div>
+
     {{/each}}
   </div>
   {{/if}}

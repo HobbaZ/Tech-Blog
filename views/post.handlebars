@@ -5,7 +5,7 @@
   <hr>
   
   <!--add comment to post area-->
-    <form class="form-inline">
+    <form class="form-inline new-comment">
       <div class="form-group">
         <label for="commentdesc"></label>
         <textarea class="form-control" type="text" id="commentdesc" name="commentdesc" placeholder="Add your comment"></textarea>
@@ -18,7 +18,7 @@
   {{#each comments as |comment| }}
 <div class="row mb-4 comment">
   <div class="col-md-5">
-    <p>{{commentdesc}}</p>
+    <p>{{comment.commentdesc}}</p>
     <p>{{comment.user.name}} on {{format_date comment.date_created}}</p>
   </div>
 

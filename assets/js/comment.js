@@ -6,16 +6,16 @@ const commentHandler = async (event) => {
     if (description) {
       const response = await fetch(`/api/comments`, {
         method: 'POST',
-        body: JSON.stringify({ description }),
+        body: JSON.stringify({ description, post_id }),
         headers: {
           'Content-Type': 'application/json',
         },
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.reload();
       } else {
-        alert('Failed to create post');
+        alert('Failed to create comment');
       }
     }
   };
@@ -29,7 +29,7 @@ const commentHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/post');
       } else {
         alert('Failed to delete comment');
       }

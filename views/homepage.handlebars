@@ -7,9 +7,7 @@
     <p>{{post.description}}</p>
     <p>Created by {{post.user.name}} on {{format_date post.date_created}}</p>
 
-    {{#if comment.id.length}}
-<p>{{comment.id.length}} comments</p>
-{{/if}}
+    <p>{{comment.length}} Comments</p>
   </div>
 
   

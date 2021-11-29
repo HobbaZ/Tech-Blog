@@ -7,15 +7,15 @@
   <!--add comment to post area-->
     <form class="form-inline new-comment">
       <div class="form-group">
-        <label for="commentdesc"></label>
-        <textarea class="form-control" type="text" id="commentdesc" name="commentdesc" placeholder="Add your comment"></textarea>
+        <label for="comment-add"></label>
+        <textarea class="form-control" type="text" id="comment-add" name="comment-add" placeholder="Add your comment"></textarea>
       </div>
         <button type="submit" class="btn btn-primary">Add Comment</button>
         <p>{{comments.length}} comments</p>
       </form>
       
 <!-- Loop through comments-->
-  {{#each comments as |comment| }}
+  {{#each post.comments as |comment| }}
 <div class="row mb-4 comment">
   <div class="col-md-5">
     <p>{{comment.commentdesc}}</p>

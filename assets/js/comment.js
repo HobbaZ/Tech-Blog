@@ -1,26 +1,28 @@
 const commentHandler = async (event) => {
     event.preventDefault();
 
-    const description = document.querySelector('#commentdesc').value.trim();
+    const description = document.querySelector('#comment-add').value.trim();
   
     if (description) {
       const response = await fetch(`/api/comments`, {
         method: 'POST',
-        body: JSON.stringify({ description, post_id }),
+        body: JSON.stringify({ description }),
         headers: {
           'Content-Type': 'application/json',
         },
       });
   
       if (response.ok) {
-        document.location.reload();
+        document.location.replace('/post');
       } else {
         alert('Failed to create comment');
       }
+    } else {
+      console.log('No description detected')
     }
   };
   
-  const delButtonHandler = async (event) => {
+  /*const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
   
@@ -34,8 +36,8 @@ const commentHandler = async (event) => {
         alert('Failed to delete comment');
       }
     }
-  };
+  };*/
 
 document
 .querySelector('.new-comment')
-.addEventListener('submit', commentHandler);
+.addEventListener('click', commentHandler);

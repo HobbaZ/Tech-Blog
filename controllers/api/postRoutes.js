@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post } = require('../../models');
+const { Post, Comment, User } = require('../../models');
 
 //Route to create new post
 router.post('/', async (req, res) => {
@@ -15,7 +15,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-//route to get a post, link to button click
+//route to get a post
 router.get('/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
@@ -23,6 +23,16 @@ router.get('/:id', async (req, res) => {
         id: req.params.id,
         user_id: req.session.user_id,
       },
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+        {
+          model: Comment,
+          attributes: ['id', 'commentdesc', 'post_id', 'user_id'],
+        },
+      ],
     });
 
     if (!postData) {

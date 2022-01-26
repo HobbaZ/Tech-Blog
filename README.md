@@ -11,17 +11,10 @@
 
 ## Description
 ### Project Aim ###
-Make tech blog
-
-### What Problem Does It Solve ###
-Solves the programmer's most gruelling and hated task, documentation.
-
-### What I Learnt ###
-Put what skills you learnt or advanced upon here.
+Create a MVC centered technology blog where devs can post ideas and comment on them.
 
 ## Deployment
-You can view the [website link](https://github.com/HobbaZ/Tech-Blog) here. 
-
+You can view the [website link](https://tech-blog-hobbaz.herokuapp.com/) here. 
 
 ## Table of Contents
 - [Description](#description)
@@ -102,19 +95,23 @@ WHEN I am idle on the site for more than a set time
 THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 
 ## Screenshots
-![Cool example image Photo by <a href="https://unsplash.com/@ffstop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Fotis Fotopoulos</a> on <a href="https://unsplash.com/s/photos/programming?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  ](./assets/images/fotis-fotopoulos-DuHKoV44prg-unsplash.jpg)
-  
-![Cool example photo by Photo by <a href="https://unsplash.com/@altumcode?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">AltumCode</a> on <a href="https://unsplash.com/s/photos/programming?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  ](./assets/images/altumcode-XMFZqrGyV-Q-unsplash.jpg)
+![screenshot](./assets/images/screenshot.PNG)
+![profile screenshot](./assets/images/screenshot2.PNG)
 
 ## Installation
-Deployed to heroku
+1. Clone the repo to your computer by clicking the green code button and copying the SSH version.
+
+2. Open Gitbash in your desired folder and type ```git clone ``` then right click to paste the string and hit enter. The repo will then be cloned to your computer.
+
+3. Navigate to the repo folder and type ```code .``` into gitbash to open the repo in VS Code.
+
+4. Open a new Terminal in VS Code and type ```npm install``` to install the repo dependencies.
+
+5. Finally, type ```npm start``` into the terminal and navigate to the stated localhost port in your web browser.
 
 ## Features
-- Clickable table of contents
-- Easily modifiable for more sections, more images, etc
-- Badges
+- Post creation
+- Commenting on posts
 
 ## Technology
 

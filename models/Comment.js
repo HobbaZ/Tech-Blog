@@ -14,12 +14,17 @@ Comment.init(
     commentdesc: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        len: [1]
+      }
     },
+
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
+    
     post_id: {
         type: DataTypes.INTEGER,
         references: {

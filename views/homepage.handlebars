@@ -1,4 +1,6 @@
 <!-- Loop over each object in the posts array -->
+<h2 class= "homepage">Join the conversation by clicking on one of the posts below</h2>
+
 {{#each posts as |post| }}
 <a href="/post/{{post.id}}">
 <div class="row mb-4 post">
@@ -6,7 +8,10 @@
     <h2 class='postTitle'>{{post.title}}</h2>
     <p>{{post.description}}</p>
     <p>Created by {{post.user.name}} on {{format_date post.date_created}}</p>
-
+<!--Add length of comment array to post-->
+{{#if posts.comments.length}}
+<p>{{posts.comments.length}} comments</p>
+{{/if}}
   </div>
   </a>
 

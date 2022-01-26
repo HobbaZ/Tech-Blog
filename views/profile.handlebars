@@ -1,12 +1,11 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome {{name}}!, What tech question is on your mind?</h2>
+    <h2 class= "question">Welcome {{name}}!, What tech question is on your mind?</h2>
   </div>
 </div>
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Create a New Post:</h3>
 
     <form class="form new-post-form">
       <div class="form-group row">
@@ -19,23 +18,25 @@
         <textarea class="form-control" id="post-desc" name="post-desc"></textarea><br>
       </div>
 
+      <div class="buttonHolder">
         <button type="submit" class="btn btn-primary">Create</button>
-
+      </div>
     </form>
   </div>
 
   {{#if posts.length}}
   <div class="col-md-6 posts-list">
-    <h3 class="postTitle">{{posts.length}} posts:</h3>
+    <h3 class="postTitle">You have created {{posts.length}} posts:</h3>
 
     {{#each posts as |post|}}
-    <div class="row mb-2 post">
+    <div class="row post">
       <a href="/post/{{post.id}}">
       <div class="col-md-8">
         <h4 class = 'postTitle'>{{post.title}}
           <button class="btn btn-sm btn-danger" data-id="{{post.id}}">X</button>
         </h4>
-        <p>{{post.description}}</p>
+        <p class ="postDesc">{{post.description}}</p>
+        <p>On {{format_date post.date_created}}</p>
       </div>
       </a>
       </div>

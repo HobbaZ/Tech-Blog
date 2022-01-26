@@ -4,6 +4,7 @@ const newFormHandler = async (event) => {
   const title = document.querySelector('#post-title').value.trim();
   const description = document.querySelector('#post-desc').value.trim();
 
+  //Create a post
   if (title && description) {
     const response = await fetch(`/api/posts`, {
       method: 'POST',
@@ -14,13 +15,15 @@ const newFormHandler = async (event) => {
     });
 
     if (response.ok) {
+      console.log('Created a post');
       document.location.replace('/profile');
     } else {
-      alert('Failed to create post');
+      console.log('Failed to create post');
     }
   }
 };
 
+//Delete a post
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
@@ -30,9 +33,10 @@ const delButtonHandler = async (event) => {
     });
 
     if (response.ok) {
+      console.log('Deleted a post');
       document.location.replace('/profile');
     } else {
-      alert('Failed to delete post');
+      console.log('Failed to delete post');
     }
   }
 };
